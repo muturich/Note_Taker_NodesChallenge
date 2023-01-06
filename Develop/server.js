@@ -7,12 +7,12 @@ const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
 
 
 const app = express();
-var PORT = process.env.PORT || 4023;
+var PORT = process.env.PORT || 4000;
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static("./Develop/public"));
 
 //Setting routes for APIs
 //This gets notes saved and joins it in db.json
