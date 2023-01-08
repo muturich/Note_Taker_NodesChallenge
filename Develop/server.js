@@ -12,7 +12,7 @@ var PORT = process.env.PORT || 4000;
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("./Develop/public"));
+app.use(express.static("public"));
 
 //Setting routes for APIs
 //This gets notes saved and joins it in db.json
@@ -40,6 +40,8 @@ app.delete("/api/notes/:id", (req, res) => {
 
 
 //HTML calls
+
+
 //calls home page
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "/public/index.html"));
